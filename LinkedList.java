@@ -1596,7 +1596,7 @@ public class LinkedList {
 
         //step 3 - check left half and right half
 
-        while(left != null && right != null) {
+        while(right != null) {
             if(left.data != right.data) {
                 return false;
             }
