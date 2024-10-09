@@ -1,1359 +1,1359 @@
 //for creating a single node
 
-// public class LinkedList {
-//     public static class Node {     //node class creation
-//         int data;   //property 1
-//         Node next;  //property 2
+public class LinkedList {
+    public static class Node {     //node class creation
+        int data;   //property 1
+        Node next;  //property 2
 
-//         public Node(int data) {    //construction
-//             this.data = data;
-//             this.next = null;
-//         }
-//     }
-//     public static void main(String args[]) {
+        public Node(int data) {    //construction
+            this.data = data;
+            this.next = null;
+        }
+    }
+    public static void main(String args[]) {
 
-//     }
-// }
+    }
+}
 
 
 
 //for creating head and tail (add first and last node)
 
-// public class LinkedList {
-//     public static class Node {     
-//         int data;  
-//         Node next;
+public class LinkedList {
+    public static class Node {     
+        int data;  
+        Node next;
 
-//         public Node(int data) {    
-//             this.data = data;
-//             this.next = null;
-//         }
-//     }
+        public Node(int data) {    
+            this.data = data;
+            this.next = null;
+        }
+    }
 
-//     public static Node head;   //property 1
-//     public static Node tail;   //property 2
+    public static Node head;   //property 1
+    public static Node tail;   //property 2
 
-//     public void addFirst(int data) {
-//         //step 1 = create a new node
-//         Node newNode = new Node(data);
+    public void addFirst(int data) {
+        //step 1 = create a new node
+        Node newNode = new Node(data);
 
-//         if(head == null) {
-//             head = tail = newNode;
-//             return;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
 
-//         //step 2 = newNode next = head
-//         newNode.next = head; //LInk
+        //step 2 = newNode next = head
+        newNode.next = head; //LInk
 
-//         //step 3 == head = newNode
-//         head = newNode; 
-//     }
+        //step 3 == head = newNode
+        head = newNode; 
+    }
 
-//     public void lastAdd(int data) {
-//         Node newNode = new Node(data);
+    public void lastAdd(int data) {
+        Node newNode = new Node(data);
         
-//         if(head == null) {
-//             head = tail = newNode;
-//             return;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
 
-//         tail.next = newNode;
+        tail.next = newNode;
 
-//         tail = newNode;
-//     }
+        tail = newNode;
+    }
 
-//     public static void main(String args[]) {
-//         LinkedList ll = new LinkedList(); //object creation
+    public static void main(String args[]) {
+        LinkedList ll = new LinkedList(); //object creation
 
-//         ll.addFirst(1);
-//         ll.addFirst(2);
-//         ll.lastAdd(3);
-//         ll.lastAdd(4);
+        ll.addFirst(1);
+        ll.addFirst(2);
+        ll.lastAdd(3);
+        ll.lastAdd(4);
 
-//     }
-// }
-
-
+    }
+}
 
 
-//print a linked list
 
-// public class LinkedList {
-//         public static class Node {     
-//             int data;  
-//             Node next;
+
+print a linked list
+
+public class LinkedList {
+        public static class Node {     
+            int data;  
+            Node next;
     
-//             public Node(int data) {    
-//                 this.data = data;
-//                 this.next = null;
-//             }
-//         }
+            public Node(int data) {    
+                this.data = data;
+                this.next = null;
+            }
+        }
     
-//         public static Node head;   //property 1
-//         public static Node tail;   //property 2
+        public static Node head;   //property 1
+        public static Node tail;   //property 2
     
-//         public void addFirst(int data) {
-//             //step 1 = create a new node
-//             Node newNode = new Node(data);
+        public void addFirst(int data) {
+            //step 1 = create a new node
+            Node newNode = new Node(data);
     
-//             if(head == null) {
-//                 head = tail = newNode;
-//                 return;
-//             }
+            if(head == null) {
+                head = tail = newNode;
+                return;
+            }
     
-//             //step 2 = newNode next = head
-//             newNode.next = head; //LInk
+            //step 2 = newNode next = head
+            newNode.next = head; //LInk
     
-//             //step 3 == head = newNode
-//             head = newNode; 
-//         }
+            //step 3 == head = newNode
+            head = newNode; 
+        }
     
-//         public void lastAdd(int data) {
-//             Node newNode = new Node(data);
+        public void lastAdd(int data) {
+            Node newNode = new Node(data);
             
-//             if(head == null) {
-//                 head = tail = newNode;
-//                 return;
-//             }
+            if(head == null) {
+                head = tail = newNode;
+                return;
+            }
     
-//             tail.next = newNode;
+            tail.next = newNode;
     
-//             tail = newNode;
-//         }
+            tail = newNode;
+        }
 
-//         public void print() {
-//             // if(head == null) {
-//             //     System.out.println("LL is empty");
-//             //     return;
-//             // }
+        public void print() {
+            // if(head == null) {
+            //     System.out.println("LL is empty");
+            //     return;
+            // }
 
-//             Node temp = head;
-//             while(temp != null) {
-//                 System.out.print(temp.data + "->");
-//                 temp = temp.next;
-//             }
-//             System.out.println("null");
-//         }
+            Node temp = head;
+            while(temp != null) {
+                System.out.print(temp.data + "->");
+                temp = temp.next;
+            }
+            System.out.println("null");
+        }
     
-//         public static void main(String args[]) {
-//             LinkedList ll = new LinkedList(); //object creation
+        public static void main(String args[]) {
+            LinkedList ll = new LinkedList(); //object creation
             
-//             ll.print();
+            ll.print();
 
-//             ll.addFirst(2);
-//             ll.print();
+            ll.addFirst(2);
+            ll.print();
 
-//             ll.addFirst(1);
-//             ll.print();
+            ll.addFirst(1);
+            ll.print();
 
-//             ll.lastAdd(3);
-//             ll.print();
+            ll.lastAdd(3);
+            ll.print();
 
-//             ll.lastAdd(4);
-//             ll.print();
-//         }
-//     }
+            ll.lastAdd(4);
+            ll.print();
+        }
+    }
 
 
 
-//add in the middle
+add in the middle
 
-// public class LinkedList {
-//         public static class Node {     
-//             int data;  
-//             Node next;
+public class LinkedList {
+        public static class Node {     
+            int data;  
+            Node next;
     
-//             public Node(int data) {    
-//                 this.data = data;
-//                 this.next = null;
-//             }
-//         }
+            public Node(int data) {    
+                this.data = data;
+                this.next = null;
+            }
+        }
     
-//         public static Node head;   //property 1
-//         public static Node tail;   //property 2
+        public static Node head;   //property 1
+        public static Node tail;   //property 2
     
-//         public void addFirst(int data) {
-//             //step 1 = create a new node
-//             Node newNode = new Node(data);
+        public void addFirst(int data) {
+            //step 1 = create a new node
+            Node newNode = new Node(data);
     
-//             if(head == null) {
-//                 head = tail = newNode;
-//                 return;
-//             }
+            if(head == null) {
+                head = tail = newNode;
+                return;
+            }
     
-//             //step 2 = newNode next = head
-//             newNode.next = head; //LInk
+            //step 2 = newNode next = head
+            newNode.next = head; //LInk
     
-//             //step 3 == head = newNode
-//             head = newNode; 
-//         }
+            //step 3 == head = newNode
+            head = newNode; 
+        }
     
-//         public void lastAdd(int data) {
-//             Node newNode = new Node(data);
+        public void lastAdd(int data) {
+            Node newNode = new Node(data);
             
-//             if(head == null) {
-//                 head = tail = newNode;
-//                 return;
-//             }
+            if(head == null) {
+                head = tail = newNode;
+                return;
+            }
     
-//             tail.next = newNode;
+            tail.next = newNode;
     
-//             tail = newNode;
-//         }
+            tail = newNode;
+        }
 
-//         public void print() {
-//             // if(head == null) {
-//             //     System.out.println("LL is empty");
-//             //     return;
-//             // }
+        public void print() {
+            // if(head == null) {
+            //     System.out.println("LL is empty");
+            //     return;
+            // }
 
-//             Node temp = head;
-//             while(temp != null) {
-//                 System.out.print(temp.data + "->");
-//                 temp = temp.next;
-//             }
-//             System.out.println("null");
-//         }
+            Node temp = head;
+            while(temp != null) {
+                System.out.print(temp.data + "->");
+                temp = temp.next;
+            }
+            System.out.println("null");
+        }
 
-//         public void addInMiddle(int idx, int data) {    //add in middle
+        public void addInMiddle(int idx, int data) {    //add in middle
 
-//             if(idx == 0) {               //for 0th index (base case)
-//                 addFirst(data);
-//                 return;
-//             }
+            if(idx == 0) {               //for 0th index (base case)
+                addFirst(data);
+                return;
+            }
 
-//             Node newNode = new Node(data);
-//             Node temp = head;
-//             int i = 0;
+            Node newNode = new Node(data);
+            Node temp = head;
+            int i = 0;
 
-//             while(i < idx - 1) {
-//                 temp = temp.next;
-//                 i++;
-//             }
+            while(i < idx - 1) {
+                temp = temp.next;
+                i++;
+            }
 
-//             //i == idx - 1; temp = prev
-//             newNode.next = temp.next;
-//             temp.next = newNode;
-//         }
+            //i == idx - 1; temp = prev
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
     
-//         public static void main(String args[]) {
-//             LinkedList ll = new LinkedList(); //object creation
+        public static void main(String args[]) {
+            LinkedList ll = new LinkedList(); //object creation
             
-//             ll.print();
+            ll.print();
 
-//             ll.addFirst(2);
-//             ll.print();
+            ll.addFirst(2);
+            ll.print();
 
-//             ll.addFirst(1);
-//             ll.print();
+            ll.addFirst(1);
+            ll.print();
 
-//             ll.lastAdd(3);
-//             ll.print();
+            ll.lastAdd(3);
+            ll.print();
 
-//             ll.lastAdd(4);
-//             ll.print();
+            ll.lastAdd(4);
+            ll.print();
 
-//             ll.addInMiddle(2, 9);
-//             ll.print();
+            ll.addInMiddle(2, 9);
+            ll.print();
 
-//         }
-//     }
+        }
+    }
 
 
 
-//size of a linked list
+size of a linked list
 
-// public class LinkedList {
-//     public static class Node {
-//         int data;
-//         Node next;
+public class LinkedList {
+    public static class Node {
+        int data;
+        Node next;
 
-//         public Node(int data) {
-//             this.data = data;
-//             this.next = null;
-//         }
-//     }
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
-//     public static Node head;
-//     public static Node tail;
-//     public static int size; //size var
+    public static Node head;
+    public static Node tail;
+    public static int size; //size var
 
-//     public void addFirst(int data) {
-//         Node newNode = new Node(data);
-//         size++;  //1st
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        size++;  //1st
 
-//         if(head == null) {
-//             head = tail = newNode;
-//             return;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
 
-//         newNode.next = head;
-//         head = newNode;
-//     }
+        newNode.next = head;
+        head = newNode;
+    }
 
-//     public void addLast(int data) {
-//         Node newNode = new Node(data);
-//         size++;     //2nd
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        size++;     //2nd
 
-//         if(head == null) {
-//             head = tail = newNode;
-//             return;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
 
-//         tail.next = newNode;
-//         tail = newNode;
-//     }
+        tail.next = newNode;
+        tail = newNode;
+    }
 
-//     public void print() {
-//         Node temp = head;
-//         while(temp != null) {
-//             System.out.print(temp.data + "->");
-//             temp = temp.next;
-//         }
-//         System.out.println("null");
-//     }
+    public void print() {
+        Node temp = head;
+        while(temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
 
-//     public void addInMiddle(int idx, int data) {
+    public void addInMiddle(int idx, int data) {
 
-//         if(idx == 0) {
-//             addFirst(data);
-//             return;
-//         }
+        if(idx == 0) {
+            addFirst(data);
+            return;
+        }
 
-//         Node newNode = new Node(data);
-//         size++;     //3rd
+        Node newNode = new Node(data);
+        size++;     //3rd
 
-//         Node temp = head;
-//         int i = 0;
+        Node temp = head;
+        int i = 0;
 
-//         while(i < idx - 1) {
-//             temp = temp.next;
-//             i++;
-//         }
+        while(i < idx - 1) {
+            temp = temp.next;
+            i++;
+        }
 
-//         newNode.next = temp.next;
-//         temp.next = newNode;
-//     }
-//     public static void main(String args[]) {
-//         LinkedList ll = new LinkedList();
-//         ll.print();
-//         ll.addFirst(2);
-//         ll.print();
-//         ll.addFirst(1);
-//         ll.print();
-//         ll.addLast(3);
-//         ll.print();
-//         ll.addLast(5);
-//         ll.print();
-//         ll.addInMiddle(3, 4);
-//         ll.print();
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+    public static void main(String args[]) {
+        LinkedList ll = new LinkedList();
+        ll.print();
+        ll.addFirst(2);
+        ll.print();
+        ll.addFirst(1);
+        ll.print();
+        ll.addLast(3);
+        ll.print();
+        ll.addLast(5);
+        ll.print();
+        ll.addInMiddle(3, 4);
+        ll.print();
         
-//         System.out.println(ll.size);  //size
+        System.out.println(ll.size);  //size
     
-//     }
-// }
+    }
+}
 
 
 
-//remove first
+remove first
 
-// public class LinkedList {
-//     public static class Node {
-//         int data;
-//         Node next;
+public class LinkedList {
+    public static class Node {
+        int data;
+        Node next;
 
-//         public Node(int data) {
-//             this.data = data;
-//             this.next = null;
-//         }
-//     }
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
-//     public static Node head;
-//     public static Node tail;
-//     public static int size;
+    public static Node head;
+    public static Node tail;
+    public static int size;
 
-//     public void addFirst(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//         if(head == null) {
-//             head = tail = newNode;
-//             return;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
 
-//         newNode.next = head;
-//         head = newNode;
-//     }
+        newNode.next = head;
+        head = newNode;
+    }
 
-//     public void addLast(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//         if(head == null) {
-//             head = tail = newNode;
-//             return;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
 
-//         tail.next = newNode;
-//         tail = newNode;
-//     }
+        tail.next = newNode;
+        tail = newNode;
+    }
 
-//     public void print() {
-//         Node temp = head;
-//         while(temp != null) {
-//             System.out.print(temp.data + "->");
-//             temp = temp.next;
-//         }
-//         System.out.println("null");
-//     }
+    public void print() {
+        Node temp = head;
+        while(temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
 
-//     public void addInMiddle(int idx, int data) {
+    public void addInMiddle(int idx, int data) {
 
-//         if(idx == 0) {
-//             addFirst(data);
-//             return;
-//         }
+        if(idx == 0) {
+            addFirst(data);
+            return;
+        }
 
-//         Node newNode = new Node(data);
-//         size++;
-//         Node temp = head;
+        Node newNode = new Node(data);
+        size++;
+        Node temp = head;
         
-//         for(int i = 0; i < idx - 1; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < idx - 1; i++) {
+            temp = temp.next;
+        }
 
-//         newNode.next = temp.next;
-//         temp.next = newNode;
-//     }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
 
-//     public int removeFirst() {
+    public int removeFirst() {
 
-//         //if size is 0 then
-//         if(size == 0) {                          
-//             System.out.println("LL is empty");
-//             return Integer.MIN_VALUE;
-//         } 
+        //if size is 0 then
+        if(size == 0) {                          
+            System.out.println("LL is empty");
+            return Integer.MIN_VALUE;
+        } 
 
-//         else if(size == 1) {     //when head and tail are same
-//             int value = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return value;
-//         }
+        else if(size == 1) {     //when head and tail are same
+            int value = head.data;
+            head = tail = null;
+            size = 0;
+            return value;
+        }
 
-//         int value = head.data; 
-//         head = head.next;  //remove
-//         size --;
-//         return value;
-//     }
-//     public static void main(String args[]) {
-//         LinkedList ll = new LinkedList();
-//         ll.print();
-//         ll.addFirst(2);
-//         ll.print();
-//         ll.addFirst(1);
-//         ll.print();
-//         ll.addLast(3);
-//         ll.print();
-//         ll.addLast(5);
-//         ll.print();
-//         ll.addInMiddle(3, 4);
-//         ll.print();
+        int value = head.data; 
+        head = head.next;  //remove
+        size --;
+        return value;
+    }
+    public static void main(String args[]) {
+        LinkedList ll = new LinkedList();
+        ll.print();
+        ll.addFirst(2);
+        ll.print();
+        ll.addFirst(1);
+        ll.print();
+        ll.addLast(3);
+        ll.print();
+        ll.addLast(5);
+        ll.print();
+        ll.addInMiddle(3, 4);
+        ll.print();
 
-//         ll.removeFirst();   //remove first
-//         ll.print();
-//         System.out.println(ll.size);
-//     }
-// }
-
-
+        ll.removeFirst();   //remove first
+        ll.print();
+        System.out.println(ll.size);
+    }
+}
 
 
-//remove last
 
-// public class LinkedList {
-//     public static class Node {
-//         int data;
-//         Node next;
 
-//         public Node(int data) {
-//             this.data = data;
-//             this.next = null;
-//         }
-//     }
+remove last
 
-//     public static Node head;
-//     public static Node tail;
-//     public static int size;
+public class LinkedList {
+    public static class Node {
+        int data;
+        Node next;
 
-//     public void addFirst(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
-//         if(head == null) {
-//             head = tail = newNode;
-//             return;
-//         }
+    public static Node head;
+    public static Node tail;
+    public static int size;
 
-//         newNode.next = head;
-//         head = newNode;
-//     }
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//     public void addLast(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
 
-//         if(head == null) {
-//             head = tail = newNode;
-//             return;
-//         }
+        newNode.next = head;
+        head = newNode;
+    }
 
-//         tail.next = newNode;
-//         tail = newNode;
-//     }
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//     public void print() {
-//         Node temp = head;
-//         while(temp != null) {
-//             System.out.print(temp.data + "->");
-//             temp = temp.next;
-//         }
-//         System.out.println("null");
-//     }
+        if(head == null) {
+            head = tail = newNode;
+            return;
+        }
 
-//     public void addInMiddle(int idx, int data) {
+        tail.next = newNode;
+        tail = newNode;
+    }
 
-//         if(idx == 0) {
-//             addFirst(data);
-//             return;
-//         }
+    public void print() {
+        Node temp = head;
+        while(temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
 
-//         Node newNode = new Node(data);
-//         size++;
-//         Node temp = head;
+    public void addInMiddle(int idx, int data) {
+
+        if(idx == 0) {
+            addFirst(data);
+            return;
+        }
+
+        Node newNode = new Node(data);
+        size++;
+        Node temp = head;
         
-//         for(int i = 0; i < idx - 1; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < idx - 1; i++) {
+            temp = temp.next;
+        }
 
-//         newNode.next = temp.next;
-//         temp.next = newNode;
-//     }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
 
-//     public int removeFirst() {
+    public int removeFirst() {
 
-//         //if size is 0 then
-//         if(size == 0) {                          
-//             System.out.println("LL is empty");
-//             return Integer.MIN_VALUE;
-//         } 
+        //if size is 0 then
+        if(size == 0) {                          
+            System.out.println("LL is empty");
+            return Integer.MIN_VALUE;
+        } 
 
-//         else if(size == 1) {     //when head and tail are same
-//             int value = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return value;
-//         }
+        else if(size == 1) {     //when head and tail are same
+            int value = head.data;
+            head = tail = null;
+            size = 0;
+            return value;
+        }
 
-//         int value = head.data; 
-//         head = head.next;  //remove
-//         size --;
-//         return value;
-//     }
+        int value = head.data; 
+        head = head.next;  //remove
+        size --;
+        return value;
+    }
 
-//     public int removeLast() {
-//         if(size == 0) {
-//             System.out.println("ll is empty");
-//             return Integer.MIN_VALUE;
-//         } else if (size == 1) {
-//             int val = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return val;
-//         }
+    public int removeLast() {
+        if(size == 0) {
+            System.out.println("ll is empty");
+            return Integer.MIN_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
 
-//         Node temp = head;
-//         for(int i = 0; i < size - 2; i++) {
-//             temp = temp.next;
-//         }
+        Node temp = head;
+        for(int i = 0; i < size - 2; i++) {
+            temp = temp.next;
+        }
 
-//         int val = tail.data;  //int val = temp.next.value
-//         temp.next = null; 
-//         tail = temp;
-//         size--;
-//         return val;
-//     }
-//     public static void main(String args[]) {
-//         LinkedList ll = new LinkedList();
-//         ll.print();
-//         ll.addFirst(2);
-//         ll.print();
-//         ll.addFirst(1);
-//         ll.print();
-//         ll.addLast(3);
-//         ll.print();
-//         ll.addLast(5);
-//         ll.print();
-//         ll.addInMiddle(3, 4);
-//         ll.print();
+        int val = tail.data;  //int val = temp.next.value
+        temp.next = null; 
+        tail = temp;
+        size--;
+        return val;
+    }
+    public static void main(String args[]) {
+        LinkedList ll = new LinkedList();
+        ll.print();
+        ll.addFirst(2);
+        ll.print();
+        ll.addFirst(1);
+        ll.print();
+        ll.addLast(3);
+        ll.print();
+        ll.addLast(5);
+        ll.print();
+        ll.addInMiddle(3, 4);
+        ll.print();
 
-//         ll.removeFirst();   //remove first
-//         ll.print();
-//         System.out.println(ll.size);
+        ll.removeFirst();   //remove first
+        ll.print();
+        System.out.println(ll.size);
 
-//         ll.removeLast();
-//         ll.print();
-//         System.out.println(ll.size);
-//     }
-// }
+        ll.removeLast();
+        ll.print();
+        System.out.println(ll.size);
+    }
+}
 
 
 
-//Search (Iterative)
+Search (Iterative)
 
-// public class LinkedList {
-//     public static class Node {
-//         int data;
-//         Node next;
+public class LinkedList {
+    public static class Node {
+        int data;
+        Node next;
 
-//         public Node(int data) {
-//             this.data = data;
-//             this.next = null;
-//         }
-//     }
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
-//     public static Node head;
-//     public static Node tail;
-//     public static int size;
+    public static Node head;
+    public static Node tail;
+    public static int size;
 
-//     public void addFirst(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//         if(head == null) {
-//             head = tail = newNode;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+        }
 
-//         newNode.next = head;
-//         head = newNode;
-//     }
+        newNode.next = head;
+        head = newNode;
+    }
     
-//     public void addLast(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//         if(head == null) {
-//             head = tail = newNode;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+        }
 
-//         tail.next = newNode;
-//         tail = newNode;
-//     }
+        tail.next = newNode;
+        tail = newNode;
+    }
 
-//     public void print() {
-//         Node temp = head;
+    public void print() {
+        Node temp = head;
 
-//         while(temp != null) {
-//             System.out.print(temp.data + "->");
-//             temp = temp.next;
-//         }
+        while(temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
         
-//         System.out.println("null");
-//     }
+        System.out.println("null");
+    }
 
-//     public void addInMiddle(int idx, int data) {
-//         if(idx == 0) {
-//             addFirst(data);
-//             return;
-//         }
+    public void addInMiddle(int idx, int data) {
+        if(idx == 0) {
+            addFirst(data);
+            return;
+        }
         
-//         Node temp = head;
-//         Node newNode = new Node(data);
-//         size++;
+        Node temp = head;
+        Node newNode = new Node(data);
+        size++;
         
 
-//         for(int i = 0; i < idx - 1; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < idx - 1; i++) {
+            temp = temp.next;
+        }
 
-//         newNode.next = temp.next;
-//         temp.next = newNode;
-//     }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
 
-//     public int removeFirst() {
+    public int removeFirst() {
 
-//         if(size == 0) {
-//             System.out.println("LL is null");
-//             return Integer.MIN_VALUE;
-//         }
+        if(size == 0) {
+            System.out.println("LL is null");
+            return Integer.MIN_VALUE;
+        }
 
-//         else if(size == 1) {
-//             int val = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return val;
-//         }
+        else if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
 
-//         int val = head.data;
-//         head = head.next;
-//         size--;
-//         return val;
-//     }
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
+    }
 
-//     public int removeLast() {
-//         if(size == 0) {
-//             System.out.println("LL is empty");
-//             return Integer.MIN_VALUE;
-//         }
+    public int removeLast() {
+        if(size == 0) {
+            System.out.println("LL is empty");
+            return Integer.MIN_VALUE;
+        }
 
-//         else if(size == 1) {
-//             int val = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return val;
-//         }
+        else if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
 
 
-//         Node temp = head;
+        Node temp = head;
 
-//         for(int i = 0; i < size - 2; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < size - 2; i++) {
+            temp = temp.next;
+        }
 
-//         int val = tail.data;
-//         temp.next = null;
-//         tail = temp;
-//         size--;
-//         return val;
+        int val = tail.data;
+        temp.next = null;
+        tail = temp;
+        size--;
+        return val;
 
-//     }
+    }
 
-//     public int search(int key) {
-//         Node temp = head;
-//         int i = 0;
+    public int search(int key) {
+        Node temp = head;
+        int i = 0;
         
-//         while(temp != null) {
-//             if(temp.data == key) {
-//                 return i;
-//             }
-//             temp = temp.next;
-//             i++;
-//         }
-//         return - 1;
-//     }
-//     public static void main(String args[]) {
-//         LinkedList ll = new LinkedList();
-//         ll.addFirst(2);
-//         ll.addFirst(1);
-//         ll.addLast(3);
-//         ll.addLast(4);
-//         ll.addLast(5);
-//         ll.print();
+        while(temp != null) {
+            if(temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return - 1;
+    }
+    public static void main(String args[]) {
+        LinkedList ll = new LinkedList();
+        ll.addFirst(2);
+        ll.addFirst(1);
+        ll.addLast(3);
+        ll.addLast(4);
+        ll.addLast(5);
+        ll.print();
 
-//         ll.addInMiddle(1, 3);
-//         ll.print();
+        ll.addInMiddle(1, 3);
+        ll.print();
 
-//         ll.removeFirst();
-//         ll.print();
-//         System.out.println(ll.size);
+        ll.removeFirst();
+        ll.print();
+        System.out.println(ll.size);
 
-//         ll.removeLast();
-//         ll.print();
-//         System.out.println(ll.size);
+        ll.removeLast();
+        ll.print();
+        System.out.println(ll.size);
 
-//         System.out.println(ll.search(2));
-//         System.out.println(ll.search(4));
-//     }
-// }
+        System.out.println(ll.search(2));
+        System.out.println(ll.search(4));
+    }
+}
 
 
 
-//Search (recursive)
+Search (recursive)
 
-// public class LinkedList {
-//     public static class Node {
-//         int data;
-//         Node next;
+public class LinkedList {
+    public static class Node {
+        int data;
+        Node next;
 
-//         public Node(int data) {
-//             this.data = data;
-//             this.next = null;
-//         }
-//     }
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
-//     public static Node head;
-//     public static Node tail;
-//     public static int size;
+    public static Node head;
+    public static Node tail;
+    public static int size;
 
-//     public void addFirst(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//         if(head == null) {
-//             head = tail = newNode;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+        }
 
-//         newNode.next = head;
-//         head = newNode;
-//     }
+        newNode.next = head;
+        head = newNode;
+    }
     
-//     public void addLast(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//         if(head == null) {
-//             head = tail = newNode;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+        }
 
-//         tail.next = newNode;
-//         tail = newNode;
-//     }
+        tail.next = newNode;
+        tail = newNode;
+    }
 
-//     public void print() {
-//         Node temp = head;
+    public void print() {
+        Node temp = head;
 
-//         while(temp != null) {
-//             System.out.print(temp.data + "->");
-//             temp = temp.next;
-//         }
+        while(temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
         
-//         System.out.println("null");
-//     }
+        System.out.println("null");
+    }
 
-//     public void addInMiddle(int idx, int data) {
-//         if(idx == 0) {
-//             addFirst(data);
-//             return;
-//         }
+    public void addInMiddle(int idx, int data) {
+        if(idx == 0) {
+            addFirst(data);
+            return;
+        }
         
-//         Node temp = head;
-//         Node newNode = new Node(data);
-//         size++;
+        Node temp = head;
+        Node newNode = new Node(data);
+        size++;
         
 
-//         for(int i = 0; i < idx - 1; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < idx - 1; i++) {
+            temp = temp.next;
+        }
 
-//         newNode.next = temp.next;
-//         temp.next = newNode;
-//     }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
 
-//     public int removeFirst() {
+    public int removeFirst() {
 
-//         if(size == 0) {
-//             System.out.println("LL is null");
-//             return Integer.MIN_VALUE;
-//         }
+        if(size == 0) {
+            System.out.println("LL is null");
+            return Integer.MIN_VALUE;
+        }
 
-//         else if(size == 1) {
-//             int val = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return val;
-//         }
+        else if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
 
-//         int val = head.data;
-//         head = head.next;
-//         size--;
-//         return val;
-//     }
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
+    }
 
-//     public int removeLast() {
-//         if(size == 0) {
-//             System.out.println("LL is empty");
-//             return Integer.MIN_VALUE;
-//         }
+    public int removeLast() {
+        if(size == 0) {
+            System.out.println("LL is empty");
+            return Integer.MIN_VALUE;
+        }
 
-//         else if(size == 1) {
-//             int val = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return val;
-//         }
+        else if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
 
 
-//         Node temp = head;
+        Node temp = head;
 
-//         for(int i = 0; i < size - 2; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < size - 2; i++) {
+            temp = temp.next;
+        }
 
-//         int val = tail.data;
-//         temp.next = null;
-//         tail = temp;
-//         size--;
-//         return val;
+        int val = tail.data;
+        temp.next = null;
+        tail = temp;
+        size--;
+        return val;
 
-//     }
+    }
 
-//     public int search(int key) {
-//         Node temp = head;
-//         int i = 0;
+    public int search(int key) {
+        Node temp = head;
+        int i = 0;
         
-//         while(temp != null) {
-//             if(temp.data == key) {
-//                 return i;
-//             }
-//             temp = temp.next;
-//             i++;
-//         }
-//         return - 1;
-//     }
+        while(temp != null) {
+            if(temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return - 1;
+    }
 
-//     public int helper(Node head, int key) {
-//         //base case
-//         if(head == null) {
-//             return - 1;
-//         }
+    public int helper(Node head, int key) {
+        //base case
+        if(head == null) {
+            return - 1;
+        }
 
-//         //work
-//         if(head.data == key) {
-//             return 0;
-//         }
+        //work
+        if(head.data == key) {
+            return 0;
+        }
 
-//         int idx = helper(head.next, key);
-//         if(idx == - 1) {
-//             return - 1;
-//         }
+        int idx = helper(head.next, key);
+        if(idx == - 1) {
+            return - 1;
+        }
         
-//         return idx + 1;
-//     }
+        return idx + 1;
+    }
 
-//     public int recSearch(int key) {
-//         return helper(head, key);
-//     }
-//     public static void main(String args[]) {
-//         LinkedList ll = new LinkedList();
-//         ll.addFirst(2);
-//         ll.addFirst(1);
-//         ll.addLast(3);
-//         ll.addLast(4);
-//         ll.addLast(5);
-//         ll.print();
+    public int recSearch(int key) {
+        return helper(head, key);
+    }
+    public static void main(String args[]) {
+        LinkedList ll = new LinkedList();
+        ll.addFirst(2);
+        ll.addFirst(1);
+        ll.addLast(3);
+        ll.addLast(4);
+        ll.addLast(5);
+        ll.print();
 
-//         ll.addInMiddle(1, 3);
-//         ll.print();
+        ll.addInMiddle(1, 3);
+        ll.print();
 
-//         ll.removeFirst();
-//         ll.print();
-//         System.out.println(ll.size);
+        ll.removeFirst();
+        ll.print();
+        System.out.println(ll.size);
 
-//         ll.removeLast();
-//         ll.print();
-//         System.out.println(ll.size);
+        ll.removeLast();
+        ll.print();
+        System.out.println(ll.size);
 
-//         // System.out.println(ll.search(2));
-//         // System.out.println(ll.search(4));
+        // System.out.println(ll.search(2));
+        // System.out.println(ll.search(4));
 
         
-//          System.out.println(ll.recSearch(2));
-//          System.out.println(ll.recSearch(8));
-//     }
-// }
+         System.out.println(ll.recSearch(2));
+         System.out.println(ll.recSearch(8));
+    }
+}
 
 
 
 
-//reverse a linked list 
+reverse a linked list 
 
-// public class LinkedList {
-//     public static class Node {
-//         int data;
-//         Node next;
+public class LinkedList {
+    public static class Node {
+        int data;
+        Node next;
 
-//         public Node(int data) {
-//             this.data = data;
-//             this.next = null;
-//         }
-//     }
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
-//     public static Node head;
-//     public static Node tail;
-//     public static int size;
+    public static Node head;
+    public static Node tail;
+    public static int size;
 
-//     public void addFirst(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//         if(head == null) {
-//             head = tail = newNode;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+        }
 
-//         newNode.next = head;
-//         head = newNode;
-//     }
+        newNode.next = head;
+        head = newNode;
+    }
     
-//     public void addLast(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//         if(head == null) {
-//             head = tail = newNode;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+        }
 
-//         tail.next = newNode;
-//         tail = newNode;
-//     }
+        tail.next = newNode;
+        tail = newNode;
+    }
 
-//     public void print() {
-//         Node temp = head;
+    public void print() {
+        Node temp = head;
 
-//         while(temp != null) {
-//             System.out.print(temp.data + "->");
-//             temp = temp.next;
-//         }
+        while(temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
         
-//         System.out.println("null");
-//     }
+        System.out.println("null");
+    }
 
-//     public void addInMiddle(int idx, int data) {
-//         if(idx == 0) {
-//             addFirst(data);
-//             return;
-//         }
+    public void addInMiddle(int idx, int data) {
+        if(idx == 0) {
+            addFirst(data);
+            return;
+        }
         
-//         Node temp = head;
-//         Node newNode = new Node(data);
-//         size++;
+        Node temp = head;
+        Node newNode = new Node(data);
+        size++;
         
 
-//         for(int i = 0; i < idx - 1; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < idx - 1; i++) {
+            temp = temp.next;
+        }
 
-//         newNode.next = temp.next;
-//         temp.next = newNode;
-//     }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
 
-//     public int removeFirst() {
+    public int removeFirst() {
 
-//         if(size == 0) {
-//             System.out.println("LL is null");
-//             return Integer.MIN_VALUE;
-//         }
+        if(size == 0) {
+            System.out.println("LL is null");
+            return Integer.MIN_VALUE;
+        }
 
-//         else if(size == 1) {
-//             int val = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return val;
-//         }
+        else if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
 
-//         int val = head.data;
-//         head = head.next;
-//         size--;
-//         return val;
-//     }
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
+    }
 
-//     public int removeLast() {
-//         if(size == 0) {
-//             System.out.println("LL is empty");
-//             return Integer.MIN_VALUE;
-//         }
+    public int removeLast() {
+        if(size == 0) {
+            System.out.println("LL is empty");
+            return Integer.MIN_VALUE;
+        }
 
-//         else if(size == 1) {
-//             int val = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return val;
-//         }
+        else if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
 
 
-//         Node temp = head;
+        Node temp = head;
 
-//         for(int i = 0; i < size - 2; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < size - 2; i++) {
+            temp = temp.next;
+        }
 
-//         int val = tail.data;
-//         temp.next = null;
-//         tail = temp;
-//         size--;
-//         return val;
+        int val = tail.data;
+        temp.next = null;
+        tail = temp;
+        size--;
+        return val;
 
-//     }
+    }
 
-//     public int search(int key) {
-//         Node temp = head;
-//         int i = 0;
+    public int search(int key) {
+        Node temp = head;
+        int i = 0;
         
-//         while(temp != null) {
-//             if(temp.data == key) {
-//                 return i;
-//             }
-//             temp = temp.next;
-//             i++;
-//         }
-//         return - 1;
-//     }
+        while(temp != null) {
+            if(temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return - 1;
+    }
 
-//     public int helper(Node head, int key) {
-//         //base case
-//         if(head == null) {
-//             return - 1;
-//         }
+    public int helper(Node head, int key) {
+        //base case
+        if(head == null) {
+            return - 1;
+        }
 
-//         //work
-//         if(head.data == key) {
-//             return 0;
-//         }
+        //work
+        if(head.data == key) {
+            return 0;
+        }
 
-//         int idx = helper(head.next, key);
-//         if(idx == - 1) {
-//             return - 1;
-//         }
+        int idx = helper(head.next, key);
+        if(idx == - 1) {
+            return - 1;
+        }
         
-//         return idx + 1;
-//     }
+        return idx + 1;
+    }
 
-//     public int recSearch(int key) {
-//         return helper(head, key);
-//     }
+    public int recSearch(int key) {
+        return helper(head, key);
+    }
 
-//     public void reverse() {
-//         Node prev = null;
-//         Node curr = head;   // or Node curr = tail = head;
-//         Node next;
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;   // or Node curr = tail = head;
+        Node next;
 
-//         while(curr != null) {
-//             next = curr.next;
-//             curr.next = prev;
-//             prev = curr;
-//             curr = next;
-//         }
-//         head = prev;
-//     }
+        while(curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
 
-//     public static void main(String args[]) {
-//         LinkedList ll = new LinkedList();
-//         ll.addFirst(2);
-//         ll.addFirst(1);
-//         ll.addLast(3);
-//         ll.addLast(4);
-//         ll.addLast(5);
-//         ll.print();
+    public static void main(String args[]) {
+        LinkedList ll = new LinkedList();
+        ll.addFirst(2);
+        ll.addFirst(1);
+        ll.addLast(3);
+        ll.addLast(4);
+        ll.addLast(5);
+        ll.print();
 
-//          ll.print();
-//          ll.reverse();
-//          ll.print();
-//     }
-// }
-
-
+         ll.print();
+         ll.reverse();
+         ll.print();
+    }
+}
 
 
-//Find and remove nth node from end
 
-// public class LinkedList {
-//     public static class Node {
-//         int data;
-//         Node next;
 
-//         public Node(int data) {
-//             this.data = data;
-//             this.next = null;
-//         }
-//     }
+Find and remove nth node from end
 
-//     public static Node head;
-//     public static Node tail;
-//     public static int size;
+public class LinkedList {
+    public static class Node {
+        int data;
+        Node next;
 
-//     public void addFirst(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
-//         if(head == null) {
-//             head = tail = newNode;
-//         }
+    public static Node head;
+    public static Node tail;
+    public static int size;
 
-//         newNode.next = head;
-//         head = newNode;
-//     }
+    public void addFirst(int data) {
+        Node newNode = new Node(data);
+        size++;
+
+        if(head == null) {
+            head = tail = newNode;
+        }
+
+        newNode.next = head;
+        head = newNode;
+    }
     
-//     public void addLast(int data) {
-//         Node newNode = new Node(data);
-//         size++;
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+        size++;
 
-//         if(head == null) {
-//             head = tail = newNode;
-//         }
+        if(head == null) {
+            head = tail = newNode;
+        }
 
-//         tail.next = newNode;
-//         tail = newNode;
-//     }
+        tail.next = newNode;
+        tail = newNode;
+    }
 
-//     public void print() {
-//         Node temp = head;
+    public void print() {
+        Node temp = head;
 
-//         while(temp != null) {
-//             System.out.print(temp.data + "->");
-//             temp = temp.next;
-//         }
+        while(temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
         
-//         System.out.println("null");
-//     }
+        System.out.println("null");
+    }
 
-//     public void addInMiddle(int idx, int data) {
-//         if(idx == 0) {
-//             addFirst(data);
-//             return;
-//         }
+    public void addInMiddle(int idx, int data) {
+        if(idx == 0) {
+            addFirst(data);
+            return;
+        }
         
-//         Node temp = head;
-//         Node newNode = new Node(data);
-//         size++;
+        Node temp = head;
+        Node newNode = new Node(data);
+        size++;
         
 
-//         for(int i = 0; i < idx - 1; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < idx - 1; i++) {
+            temp = temp.next;
+        }
 
-//         newNode.next = temp.next;
-//         temp.next = newNode;
-//     }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
 
-//     public int removeFirst() {
+    public int removeFirst() {
 
-//         if(size == 0) {
-//             System.out.println("LL is null");
-//             return Integer.MIN_VALUE;
-//         }
+        if(size == 0) {
+            System.out.println("LL is null");
+            return Integer.MIN_VALUE;
+        }
 
-//         else if(size == 1) {
-//             int val = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return val;
-//         }
+        else if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
 
-//         int val = head.data;
-//         head = head.next;
-//         size--;
-//         return val;
-//     }
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
+    }
 
-//     public int removeLast() {
-//         if(size == 0) {
-//             System.out.println("LL is empty");
-//             return Integer.MIN_VALUE;
-//         }
+    public int removeLast() {
+        if(size == 0) {
+            System.out.println("LL is empty");
+            return Integer.MIN_VALUE;
+        }
 
-//         else if(size == 1) {
-//             int val = head.data;
-//             head = tail = null;
-//             size = 0;
-//             return val;
-//         }
+        else if(size == 1) {
+            int val = head.data;
+            head = tail = null;
+            size = 0;
+            return val;
+        }
 
 
-//         Node temp = head;
+        Node temp = head;
 
-//         for(int i = 0; i < size - 2; i++) {
-//             temp = temp.next;
-//         }
+        for(int i = 0; i < size - 2; i++) {
+            temp = temp.next;
+        }
 
-//         int val = tail.data;
-//         temp.next = null;
-//         tail = temp;
-//         size--;
-//         return val;
+        int val = tail.data;
+        temp.next = null;
+        tail = temp;
+        size--;
+        return val;
 
-//     }
+    }
 
-//     public int search(int key) {
-//         Node temp = head;
-//         int i = 0;
+    public int search(int key) {
+        Node temp = head;
+        int i = 0;
         
-//         while(temp != null) {
-//             if(temp.data == key) {
-//                 return i;
-//             }
-//             temp = temp.next;
-//             i++;
-//         }
-//         return - 1;
-//     }
+        while(temp != null) {
+            if(temp.data == key) {
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return - 1;
+    }
 
-//     public int helper(Node head, int key) {
-//         //base case
-//         if(head == null) {
-//             return - 1;
-//         }
+    public int helper(Node head, int key) {
+        //base case
+        if(head == null) {
+            return - 1;
+        }
 
-//         //work
-//         if(head.data == key) {
-//             return 0;
-//         }
+        //work
+        if(head.data == key) {
+            return 0;
+        }
 
-//         int idx = helper(head.next, key);
-//         if(idx == - 1) {
-//             return - 1;
-//         }
+        int idx = helper(head.next, key);
+        if(idx == - 1) {
+            return - 1;
+        }
         
-//         return idx + 1;
-//     }
+        return idx + 1;
+    }
 
-//     public int recSearch(int key) {
-//         return helper(head, key);
-//     }
+    public int recSearch(int key) {
+        return helper(head, key);
+    }
 
-//     public void reverse() {
-//         Node prev = null;
-//         Node curr = head;   // or Node curr = tail = head;
-//         Node next;
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;   // or Node curr = tail = head;
+        Node next;
 
-//         while(curr != null) {
-//             next = curr.next;
-//             curr.next = prev;
-//             prev = curr;
-//             curr = next;
-//         }
-//         head = prev;
-//     }
+        while(curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
 
-//     public void deleteNthfromEnd(int n) {  //n = node to delete
+    public void deleteNthfromEnd(int n) {  //n = node to delete
         
-//         //calculate size for this (not necessary to do but what if u just have to solve this sum only)
-//         int size = 0;
-//         Node temp = head;
-//         while(temp != null) {
-//             temp = temp.next;
-//             size++;
-//         }
+        //calculate size for this (not necessary to do but what if u just have to solve this sum only)
+        int size = 0;
+        Node temp = head;
+        while(temp != null) {
+            temp = temp.next;
+            size++;
+        }
 
-//         //what if the question is asked to delete the head only
-//         if(n == size) {  // as size is 5 and 5 is head from tail(end)
-//             head = head.next;  //remove first method only like prevous
-//             return;
-//         }
+        //what if the question is asked to delete the head only
+        if(n == size) {  // as size is 5 and 5 is head from tail(end)
+            head = head.next;  //remove first method only like prevous
+            return;
+        }
 
-//         //otherwise
+        //otherwise
 
-//         Node temp1 = head;
-//         for(int node = 1; node < size - n; node++) {
-//             temp1 = temp1.next;
-//         }
+        Node temp1 = head;
+        for(int node = 1; node < size - n; node++) {
+            temp1 = temp1.next;
+        }
 
-//         temp1.next = temp1.next.next;
-//         return;
-//     }
+        temp1.next = temp1.next.next;
+        return;
+    }
 
-//     public static void main(String args[]) {
-//         LinkedList ll = new LinkedList();
-//         ll.addFirst(2);
-//         ll.addFirst(1);
-//         ll.addLast(3);
-//         ll.addLast(4);
-//         ll.addLast(5);
-//         ll.print();
+    public static void main(String args[]) {
+        LinkedList ll = new LinkedList();
+        ll.addFirst(2);
+        ll.addFirst(1);
+        ll.addLast(3);
+        ll.addLast(4);
+        ll.addLast(5);
+        ll.print();
 
-//         ll.deleteNthfromEnd(3);
-//         ll.print();
+        ll.deleteNthfromEnd(3);
+        ll.print();
         
-//     }
-// }
+    }
+}
 
 
 
@@ -1596,7 +1596,7 @@ public class LinkedList {
 
         //step 3 - check left half and right half
 
-        while(right != null) {
+        while(left != null && right != null) {
             if(left.data != right.data) {
                 return false;
             }
