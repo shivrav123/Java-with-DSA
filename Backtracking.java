@@ -227,7 +227,7 @@
 // public class Backtracking {
 //     public static int gridWays(int i, int j, int row, int col) {
 //         //base case
-//         if(i == row - 1 && j == col - 1) {  //cond for last cell
+//         if(i == row - 1 || j == col - 1) {  //cond for last cell
 //             return 1;
 //         } else if (i == row || j == col) {  //boundary cross cond
 //             return 0;
