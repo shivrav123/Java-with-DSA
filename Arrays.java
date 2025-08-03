@@ -205,78 +205,30 @@
 
 
 
-//print subarrays with with sum along with largest and smallest subarrays
+// max subarray (brute forcew)
 
-// public class Arrays {
-//     public static void printArrays(int arr[]) {
-//         int sum = 0;
-//         int largest = Integer.MIN_VALUE;
-//         int smallest = Integer.MAX_VALUE;
-
-//         for(int i = 0; i < arr.length; i++) {
-//             for(int j = i; j < arr.length; j++) {
-//                 for(int k = i; k <= j; k++) {
-//                     System.out.print(arr[k] + " ");
-//                     sum = sum + arr[k];
-//                 }
-//                 System.out.println();
-//             }
-//             System.out.println("sum is " + sum);
-//             System.out.println();
-
-//             if(sum > largest) {
-//                 largest = sum;
-//             }
-//             if(sum < smallest) {
-//                 smallest = sum;
-//             }
-
-//             sum = 0;
-//         }
-
-//         System.out.println("largest number is " + largest);
-//         System.out.println("smallest number is " + smallest);
-
-//     }
-//         public static void main(String args[]) {
-//             int arr[] = {2, 4, 6, 8, 10};
-//             printArrays(arr);
-//     }
-// }
-
-
-
-//maximum sub array sum (brute force)
-
-
-// public class Arrays {
-//     public static void printArrays(int arr[]) {
-//         int sum = 0;
-//         int largest = Integer.MIN_VALUE;
-
-//         for(int i = 0; i < arr.length; i++) {
-//             for(int j = i; j < arr.length; j++) {
-//                 sum = 0;
-//                 for(int k = i; k <= j; k++) {
-//                     sum = sum + arr[k];
-//                 }
-//                 System.out.println(sum);
-                
-//             if(sum > largest) {
-//                 largest = sum;
-//             }
-//             }
-//         }
-
-//         System.out.println("largest number is " + largest);
-
-//     }
-//         public static void main(String args[]) {
-//             int arr[] = {2, 4, 6, 8, 10};
-//             printArrays(arr);
-//     }
-// }
-
+public class Practice {
+    public static void maxSubArrays(int arr[]) {
+        int largest = Integer.MIN_VALUE;
+        for(int i = 0; i < arr.length; i++) {
+            for(int j = i; j < arr.length; j++) {
+            int sum = 0;
+                for(int k = i; k <= j; k++) {
+                    sum += arr[k];
+                }
+                System.out.println(sum);
+                if(sum > largest) {
+                    largest = sum;
+                }
+            }
+        }
+        System.out.println("largest is " + largest);
+    }
+    public static void main(String args[]) {
+        int arr[] = {1, 2, 3, 4, 5};
+        maxSubArrays(arr);
+    }
+}
 
 
 //max subarray sum (prefix array)
@@ -383,3 +335,4 @@
 //         System.out.println(trappedWater(height));
 //     }
 // }
+
