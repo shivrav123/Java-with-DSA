@@ -234,42 +234,38 @@ public class Practice {
 //max subarray sum (prefix array)
 
 
-    // public class Arrays{
-    //     public static void max_subarray_sum(int arr[]) {
-    //         int sum = 0;
-    //         int largestNumber = Integer.MIN_VALUE;
-    //         //creation of prefix
-    //         int prefix[] = new int[arr.length];
-    //         prefix[0] = arr[0];
-    //         // calculation of prefix
-    //         for(int i = 1; i < prefix.length; i++) {
-    //             prefix[i] = prefix[i - 1] + arr[i];
-    //         }
+   public class Practice {
+    public static void prefixSum(int arr[]) {
+        int max = Integer.MIN_VALUE;
+        int prefix[] = new int[arr.length];
 
-    //         //max subarray sum
-    //         for(int i = 0; i < arr.length; i++) {
-    //             for(int j = i; j < arr.length; j++) {
+        //creation of prefix array
+        prefix[0] = arr[0];
+        for(int i = 1; i < arr.length; i++) {
+            prefix[i] = prefix[i - 1] + arr[i];
+        }
 
-    //                 if(i == 0) {
-    //                     sum = prefix[j]; 
-    //                 } else {
-    //                     sum = prefix[j] - prefix[i - 1];
+        for(int i = 0; i < arr.length; i++) {
+            int sum = 0;
+            for(int j = i; j < arr.length; j++) {
+                if(i == 0) {
+                    sum = prefix[j];
+                } else {
+                    sum = prefix[j] - prefix[i - 1];
+                }
 
-    //                 }
-
-    //                 if(largestNumber < sum) {
-    //                     largestNumber = sum;
-    //                 }
-                    
-    //             }
-    //         }
-    //         System.out.println("largest number is " + largestNumber);
-    //     }
-    //     public static void main(String args[]) {
-    //         int arr[] = {1, -2, 6, -1, 3};
-    //         max_subarray_sum(arr);
-    //     }
-    // }
+                if(sum>max) {
+                    max = sum;
+                }
+            }
+        }
+        System.out.println("max sum is " + max);
+    }
+    public static void main(String args[]) {
+        int arr[] = {1, 2, 3, 4, 5, 6, 7};
+        prefixSum(arr);
+    }
+}
 
 
 
@@ -335,4 +331,5 @@ public class Practice {
 //         System.out.println(trappedWater(height));
 //     }
 // }
+
 
